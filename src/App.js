@@ -3,6 +3,8 @@ import left_dot from "./assets/images/left_dot.png";
 import right_dot from "./assets/images/right_dot.png";
 import person_img from "./assets/images/person_img.svg";
 import logo from "./assets/images/logo.svg";
+import mode_fabriek_img from "./assets/images/modefabriek_Logo 1.svg";
+import line from "./assets/images/Line 1.svg";
 import { useState } from "react";
 import { Button, Input, InputNumber, Select } from "antd";
 import codes from "country-calling-code";
@@ -155,10 +157,12 @@ function App() {
         <div className="left-side">
           <div className="logo">
             <img src={logo} alt="logo" />
+            <img src={line} alt="line" />
+            <img src={mode_fabriek_img} alt="modefabriek" />
           </div>
           <div className="title">
             Hi👋, I’m Madhur. <br />
-            Let’s walk and talk at CIFF?
+            Let’s walk and talk at Modefabriek?
           </div>
           <div className="form">
             <form>
