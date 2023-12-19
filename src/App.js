@@ -121,12 +121,13 @@ function App() {
           "Content-Type": "application/json",
         },
       })
-        // .then((res) => {
-        //   if (res.status >= 200 && res.status < 300) {
-        //     if (type == "booking") redirectToCalendly();
-        //     else setSubmitFlag(true);
-        //   }
-        // })
+        .then((res) => {
+          if (res.status >= 200 && res.status < 300) {
+            // if (type == "booking") 
+            redirectToCalendly();
+            // else setSubmitFlag(true);
+          }
+        })
         .then(
           (result) => {},
           (error) => {
@@ -135,17 +136,17 @@ function App() {
         );
     }
   };
-  // const redirectToCalendly = (type) => {
-  //   var a = document.createElement("a");
-  //   a.target = "_blank";
-  //   a.href = "https://calendly.com/madhur-khurana/30min?month=2023-08";
-  //   a.click();
+  const redirectToCalendly = (type) => {
+    var a = document.createElement("a");
+    a.target = "_blank";
+    a.href = "https://calendly.com/madhur-khurana/30min?month=2023-08";
+    a.click();
 
-  //   if (type != "callback") {
-  //     setSubmitFlag(true);
-  //     setRedirected(true);
-  //   } else props.setBookingFlag(false);
-  // };
+    // if (type != "callback") {
+    //   // setSubmitFlag(true);
+    //   setRedirected(true);
+    // } else props.setBookingFlag(false);
+  };
 
   console.log(formDetails);
   return (
