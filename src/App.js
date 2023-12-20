@@ -4,7 +4,9 @@ import right_dot from "./assets/images/right_dot.png";
 import person_img from "./assets/images/person_img.svg";
 import logo from "./assets/images/logo.svg";
 import mode_fabriek_img from "./assets/images/modefabriek_Logo 1.svg";
+import modefabriek_logo from "./assets/images/modefabriek_logo.png"
 import line from "./assets/images/Line 1.svg";
+import group_person_img from "./assets/images/group-person-img.png";
 import { useState } from "react";
 import { Button, Input, InputNumber, Select } from "antd";
 import codes from "country-calling-code";
@@ -157,9 +159,10 @@ function App() {
       <div className="ciff-container">
         <div className="left-side">
           <div className="logo">
-            <img src={logo} alt="logo" />
+            {/* <img src={logo} alt="logo" />
             <img src={line} alt="line" />
-            <img src={mode_fabriek_img} alt="modefabriek" />
+            <img src={mode_fabriek_img} alt="modefabriek" /> */}
+            <img src={modefabriek_logo} alt="img" />
           </div>
           <div className="title">
             Hi👋, I’m Madhur. <br />
@@ -200,7 +203,10 @@ function App() {
           </div>
         </div>
         <div className="right-side">
+          {/* <div className="right-side-person-img">
           <img src={person_img} alt="img" className="person" />
+          </div> */}
+          <img src={group_person_img} alt="img" />
         </div>
       </div>
       <div className="right-side-img side_img">
