@@ -1,16 +1,13 @@
-import "./App.scss";
-import left_dot from "./assets/images/left_dot.png";
-import right_dot from "./assets/images/right_dot.png";
-import person_img from "./assets/images/person_img.svg";
-import logo from "./assets/images/logo.svg";
-import mode_fabriek_img from "./assets/images/modefabriek_Logo 1.svg";
-import modefabriek_logo from "./assets/images/modefabriek_logo.png"
-import line from "./assets/images/Line 1.svg";
-import group_person_img from "./assets/images/group-person-img.png";
 import { useState } from "react";
 import { Button, Input, InputNumber, Select } from "antd";
+import "./App.scss";
 import codes from "country-calling-code";
 import CountryFlagSvg from "country-list-with-dial-code-and-flag/dist/flag-svg";
+
+import left_dot from "./assets/images/left_dot.png";
+import right_dot from "./assets/images/right_dot.png";
+import modefabriek_logo from "./assets/images/modefabriek_logo.png";
+import group_person_img from "./assets/images/group-person-img.png";
 
 function App() {
   const { Option } = Select;
@@ -69,14 +66,6 @@ function App() {
     let tempErr = {};
     let pattern =
       /^(?!.*(?:''|\.\.))[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    // for(let key in formDetails){
-    //     if( !['number','organization'].includes(key) && formDetails[key] == ''){
-    //         tempErr[key] = 'This field can not be empty'
-    //     }
-    // }
-    if (formDetails.name == "") {
-      tempErr["name"] = "Please enter your name";
-    }
 
     if (
       formDetails.number != "" &&
@@ -125,7 +114,7 @@ function App() {
       })
         .then((res) => {
           if (res.status >= 200 && res.status < 300) {
-            // if (type == "booking") 
+            // if (type == "booking")
             redirectToCalendly();
             // else setSubmitFlag(true);
           }
@@ -159,9 +148,6 @@ function App() {
       <div className="ciff-container">
         <div className="left-side">
           <div className="logo">
-            {/* <img src={logo} alt="logo" />
-            <img src={line} alt="line" />
-            <img src={mode_fabriek_img} alt="modefabriek" /> */}
             <img src={modefabriek_logo} alt="img" />
           </div>
           <div className="title">
@@ -171,7 +157,6 @@ function App() {
           <div className="form">
             <form>
               <div className="input">
-                {/* <input placeholder='Enter email ID'  /> */}
                 <Input
                   className="form_inputs"
                   placeholder="Enter email ID"
@@ -203,9 +188,6 @@ function App() {
           </div>
         </div>
         <div className="right-side">
-          {/* <div className="right-side-person-img">
-          <img src={person_img} alt="img" className="person" />
-          </div> */}
           <img src={group_person_img} alt="img" />
         </div>
       </div>
